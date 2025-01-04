@@ -43,7 +43,7 @@ architecture Logic_01 of Reg_File is
 begin
 
     -- Instantiate the General Purpose Memory Module
-    General_Purpose_Mem_Module IMPL : General_Purpose_Mem_Module
+    General_Purpose_Mem_Module_IMPL : General_Purpose_Mem_Module
         port map(
             ReadRegister1 => ReadRegister_1,
             ReadRegister2 => ReadRegister_2,
