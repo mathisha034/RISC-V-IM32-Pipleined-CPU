@@ -36,7 +36,7 @@ architecture behavior of Reg_File_tb is
     signal WriteEnable    : std_logic := '0';
 
     -- Clock period
-    constant clk_period : time := 20 ns;
+    constant clk_period : time := 20 ps;
 
 begin
     -- Instantiate the Unit Under Test (UUT)

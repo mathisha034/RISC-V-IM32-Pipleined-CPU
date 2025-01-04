@@ -34,9 +34,9 @@ architecture logic_1 of Shifter is
     begin
         
 
-        process()
-        begin
+        -- process()
+        -- begin
         
-            end process;
+        --     end process;
 
 end architecture logic_1;
