@@ -12,14 +12,14 @@ architecture MUL_TB_architecture of MUL_TB is
             output_1 : OUT std_logic_vector(31 downto 0);
             output_2 : OUT std_logic_vector(31 downto 0)
         );
-    end component;;
+    end component;
 
 
     signal input_1_tb, input_2_tb  : std_logic_vector(31 downto 0) := (others => '0');
     signal output_1_tb , output_2_tb : std_logic_vector(31 downto 0) ;
     
     begin
-        MUL_Impl : multiplier
+        MUL_Impl : multiplier_unsigned
             port map(
                 input_1 => input_1_tb,
                 input_2 => input_2_tb,
