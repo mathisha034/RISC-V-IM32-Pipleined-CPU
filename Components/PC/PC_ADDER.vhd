@@ -4,8 +4,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity PC_ADDER is
     Port (
-        input_1 : in STD_LOGIC_VECTOR (31 downto 0);
-        output_1 : out STD_LOGIC_VECTOR (31 downto 0)
+        input_1 : in std_logic_vector (31 downto 0);
+        output_1 : out std_logic_vector (31 downto 0)
     );
 end PC_ADDER;
 
