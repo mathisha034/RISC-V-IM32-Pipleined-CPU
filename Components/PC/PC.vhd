@@ -3,8 +3,8 @@ use ieee.std_logic_1164.all;
 
 
 entity PC is
-    Port ( clk : in STD_LOGIC;
-           reset : in STD_LOGIC;
+    Port ( clk : in std_logic;
+           reset : in std_logic;
            input_Address : in std_logic_vector (31 downto 0);
            output_Address : out std_logic_vector (31 downto 0));
 end PC;
