@@ -22,6 +22,20 @@ entity multiplexter32to1 is
         input_16 : IN std_logic_vector(31 downto 0);
         input_17 : IN std_logic_vector(31 downto 0);
         input_18 : IN std_logic_vector(31 downto 0);
+        input_19 : IN std_logic_vector(31 downto 0);
+        input_20 : IN std_logic_vector(31 downto 0);
+        input_21 : IN std_logic_vector(31 downto 0);
+        input_22 : IN std_logic_vector(31 downto 0);
+        input_23 : IN std_logic_vector(31 downto 0);
+        input_24 : IN std_logic_vector(31 downto 0);
+        input_25 : IN std_logic_vector(31 downto 0);
+        input_26 : IN std_logic_vector(31 downto 0);
+        input_27 : IN std_logic_vector(31 downto 0);
+        input_28 : IN std_logic_vector(31 downto 0);
+        input_29 : IN std_logic_vector(31 downto 0);
+        input_30 : IN std_logic_vector(31 downto 0);
+        input_31 : IN std_logic_vector(31 downto 0);
+        input_32 : IN std_logic_vector(31 downto 0);
         select_bus : IN std_logic_vector(4 downto 0);
         output_1 : OUT std_logic_vector(31 downto 0)
     );
