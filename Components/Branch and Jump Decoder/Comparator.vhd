@@ -70,9 +70,18 @@ architecture Logic_1 of Comparator is
         variable temp_1 : std_logic_vector(32 downto 0);
         variable temp_2 : std_logic_vector(32 downto 0);
         begin
-            if (to_integer(unsigned(input_1)) = to_integer(unsigned(input_2))) then
+            if (to_integer(signed(input_1)) = to_integer(signed(input_2))) then
                 output_unsigned <= "00"; -- Equal
 
+            elsif (input_1(31)='0' and input_2(31) = '0' ) then
+                if (to_integer(signed(input_1)) = to_integer(signed(input_2))) then
+                    output_unsigned <= "00"; -- Equal
+                elsif (to_integer(signed(input_1)) > to_integer(signed(input_2))) then
+                    output_unsigned <= "01"; -- Greater
+                else
+                    output_unsigned <= "10"; -- Less
+                end if;
+                
             elsif (input_1(31)='1' and input_2(31)='0') then
                 output_unsigned <= "01"; -- Greater
             elsif (input_1(31)='0' and input_2(31)='1') then
@@ -97,7 +106,7 @@ architecture Logic_1 of Comparator is
         -- Instantiate the 32-bit adder for add 1 to input_2
         ADD_Operation_for_2s_complemet : adder_signed
             port map(
-                input_1 => input_2,
+                input_1 => Noter_Output_1,
                 input_2 => "00000000000000000000000000000001",
                 output_1 => adder_input_2
             );
