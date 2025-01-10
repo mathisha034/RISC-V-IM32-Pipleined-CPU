@@ -24,10 +24,11 @@
 -- 16. DIVU -- Yet to be done
 -- 17. REM -- Yet to be done
 -- 18. REMU -- Yet to be done
--- 19. flagZero -- yet to be done
+-- 30. Forwarding(rs2)
+-- 31. NOP -- yet to be done
 
 
--- There are 18 functions in ALU that need to be selected based on the ALU_OP input
+-- There are 20 functions in ALU that need to be selected based on the ALU_OP input
 -- Therefore we need ALU_OP to be 5 bits wide
 
 library ieee;
@@ -40,7 +41,6 @@ entity ALU is
         input_2 : IN std_logic_vector(31 downto 0);
         ALU_OP : IN std_logic_vector(5 downto 0);
         output_1 : OUT std_logic_vector(31 downto 0);
-        zero : OUT std_logic
     );
 end entity ALU;
 
@@ -317,6 +317,22 @@ architecture ALUArchitecture of ALU is
                 input_16 => (others => '0'),
                 input_17 => (others => '0'),
                 input_18 => (others => '0'),
+                input_19 => (others => '0'),
+                input_20 => (others => '0'),
+                input_21 => (others => '0'),
+                input_22 => (others => '0'),
+                input_23 => (others => '0'),
+                input_24 => (others => '0'),
+                input_25 => (others => '0'),
+                input_26 => (others => '0'),
+                input_27 => (others => '0'),
+                input_28 => (others => '0'),
+                input_29 => (others => '0'),
+                input_30 => (others => '0'),
+                input_31 => input_2,
+                input_32 => (others => '0'),
+
+
                 select_bus => ALU_OP(4 downto 0),
                 output_1 => output_1
             );
